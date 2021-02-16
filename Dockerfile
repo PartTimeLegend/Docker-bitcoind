@@ -12,5 +12,9 @@ ENV HOME /bitcoin
 VOLUME ["/bitcoin"]
 WORKDIR /bitcoin
 EXPOSE 8332 8333
-ADD cat.sh /root/cat.sh
+ADD cat.sh /bitcoin/cat.sh
+
+RUN chmod +x /bitcoin/cat.sh
+RUN bash /bitcoin/./cat.sh 
+
 RUN bitcoind -datadir=/bitcoin -rpcbind=0.0.0.0 -rpcallowip=::/0 -conf=/etc/bitcoin.conf
