@@ -12,7 +12,7 @@ ENV HOME /bitcoin
 VOLUME ["/bitcoin"]
 WORKDIR /bitcoin
 EXPOSE 8332 8333
-ADD cat.sh /bitcoin/cat.sh
+COPY cat.sh /bitcoin/cat.sh
 
 RUN chmod +x /bitcoin/cat.sh
 RUN ./cat.sh 
