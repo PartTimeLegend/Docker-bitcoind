@@ -38,4 +38,3 @@ jobs:
        push: true
        tags:
          bitcoind:latest
-         bitcoind:1.0.$GITHUB_RUN_ID
