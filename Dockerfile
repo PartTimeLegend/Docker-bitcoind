@@ -5,7 +5,8 @@ RUN apk update && apk add \
     wget \
     ca-certificates \
     bitcoin \
-    bitcoin-cli
+    bitcoin-cli \
+    --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main
 
 RUN mkdir /bitcoin
 ENV HOME /bitcoin
