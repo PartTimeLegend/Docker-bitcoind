@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag parttimelegend/bitcoind:latest
+      run: docker build . --file Dockerfile --tag parttimelegend/bitcoind:latest --no-cache
     - name: Show Docker Images
       run: docker images
